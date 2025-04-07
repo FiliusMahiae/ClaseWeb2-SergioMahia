@@ -112,5 +112,18 @@ Content-Type: application/json
   "password": "password123"
 }
 
+### Enviar un correo de prueba
+POST http://localhost:3000/mail
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2N2RhYTJmNmRiNjE0YzEzZjk2NmM4ZjkiLCJyb2xlIjpbInVzZXIiXSwiaWF0IjoxNzQyNDU5NDk5LCJleHAiOjE3NDI0NjY2OTl9.1ODCkUbSaTmwTRziYfSOP-8ALm8DGdv5NLjDi6YQNCQ
+
+{
+  "subject": "Prueba de envío",
+  "text": "Este es un correo de prueba enviado con Nodemailer y OAuth2.",
+  "to": "sergio.mahiarello@gmail.com",
+  "from": "nivow.web@gmail.com"
+}
+
+
 
 

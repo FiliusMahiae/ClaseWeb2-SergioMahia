@@ -23,7 +23,7 @@ const {
 } = require("../controllers/users");
 
 // Obtener todos los usuarios (no requiere validación de body ni params)
-router.get("/", getItems);
+router.get("/", authMiddleware, getItems);
 
 // Obtener un usuario por ID
 router.get("/:id", validatorGetItem, getItem);
